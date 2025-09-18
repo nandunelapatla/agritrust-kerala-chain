@@ -29,12 +29,12 @@ export const Header = () => {
 
   const texts = {
     en: {
-      title: "AgriTrust",
+      title: "AgriVerse",
       subtitle: "Government of Kerala",
       login: "Login",
     },
     ml: {
-      title: "അഗ്രിട്രസ്റ്റ്",
+      title: "അഗ്രിവേഴ്സ്",
       subtitle: "കേരള സർക്കാർ",
       login: "ലോഗിൻ",
     },

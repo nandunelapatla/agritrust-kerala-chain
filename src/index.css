@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* AgriTrust Design System - Kerala Government Agricultural Platform
+/* AgriVerse Design System - Kerala Government Agricultural Platform
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    /* Core AgriTrust Brand Colors */
+    /* Core AgriVerse Brand Colors */
     --background: 0 0% 100%;
     --foreground: 210 24% 16%;
     

@@ -27,7 +27,7 @@ export const HeroSection = () => {
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold leading-tight">
-                <span className="text-primary">AgriTrust</span>
+                <span className="text-primary">AgriVerse</span>
                 <br />
                 <span className="text-foreground">Smart Agriculture</span>
                 <br />

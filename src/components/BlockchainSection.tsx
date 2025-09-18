@@ -45,7 +45,7 @@ export const BlockchainSection = () => {
       {
         id: 2,
         stage: "Quality Check",
-        location: "AgriTrust Center - Palakkad",
+        location: "AgriVerse Center - Palakkad",
         date: "2024-01-16",
         responsible: "Quality Inspector",
         verified: true,

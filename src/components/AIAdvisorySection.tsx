@@ -14,7 +14,7 @@ export const AIAdvisorySection = () => {
     {
       id: 1,
       type: "bot",
-      message: "Hello! I'm your AgriTrust AI advisor. Ask me anything about farming, crops, or pest management in Malayalam or English.",
+      message: "Hello! I'm your AgriVerse AI advisor. Ask me anything about farming, crops, or pest management in Malayalam or English.",
       timestamp: "10:30 AM"
     }
   ]);

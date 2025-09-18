@@ -26,7 +26,7 @@ export const Footer = () => {
                 <Leaf className="h-6 w-6 text-primary-foreground" />
               </div>
               <div>
-                <h3 className="text-lg font-bold text-primary">AgriTrust</h3>
+                <h3 className="text-lg font-bold text-primary">AgriVerse</h3>
                 <p className="text-xs text-muted-foreground">Government of Kerala</p>
               </div>
             </div>
@@ -125,7 +125,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-muted-foreground" />
-                <span className="text-muted-foreground">agritrust@kerala.gov.in</span>
+                <span className="text-muted-foreground">agriverse@kerala.gov.in</span>
               </div>
             </div>
             <Button variant="outline" size="sm">
@@ -139,7 +139,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
           <p>
-            © {currentYear} AgriTrust - Government of Kerala. All rights reserved.
+            © {currentYear} AgriVerse - Government of Kerala. All rights reserved.
           </p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:text-primary transition-smooth">Privacy Policy</a>

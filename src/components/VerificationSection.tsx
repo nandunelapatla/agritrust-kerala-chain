@@ -89,7 +89,7 @@ export const VerificationSection = () => {
                 <QrCode className="h-10 w-10 text-accent" />
               </div>
               <h3 className="text-xl font-semibold mb-2">Scan or Enter Product Code</h3>
-              <p className="text-muted-foreground">Verify any AgriTrust certified product</p>
+              <p className="text-muted-foreground">Verify any AgriVerse certified product</p>
             </div>
 
             <div className="max-w-md mx-auto space-y-4">
@@ -132,7 +132,7 @@ export const VerificationSection = () => {
                       <CheckCircle2 className="h-8 w-8" />
                       <div>
                         <h3 className="text-xl font-semibold">Product Verified ✓</h3>
-                        <p className="text-sm text-muted-foreground">This is an authentic AgriTrust product</p>
+                        <p className="text-sm text-muted-foreground">This is an authentic AgriVerse product</p>
                       </div>
                     </div>
                   ) : (
@@ -262,7 +262,7 @@ export const VerificationSection = () => {
               </div>
               <h3 className="font-semibold mb-2">1. Scan QR Code</h3>
               <p className="text-sm text-muted-foreground">
-                Every AgriTrust product has a unique QR code linking to blockchain records
+                Every AgriVerse product has a unique QR code linking to blockchain records
               </p>
             </Card>
 
