@@ -14,7 +14,123 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      advisory_queries: {
+        Row: {
+          created_at: string
+          farmer_id: string
+          id: string
+          language: string | null
+          query_text: string
+          response: string
+        }
+        Insert: {
+          created_at?: string
+          farmer_id: string
+          id?: string
+          language?: string | null
+          query_text: string
+          response: string
+        }
+        Update: {
+          created_at?: string
+          farmer_id?: string
+          id?: string
+          language?: string | null
+          query_text?: string
+          response?: string
+        }
+        Relationships: []
+      }
+      farmer_profiles: {
+        Row: {
+          created_at: string
+          farm_size: number | null
+          full_name: string
+          id: string
+          location: string | null
+          phone: string | null
+          primary_crops: string[] | null
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          farm_size?: number | null
+          full_name: string
+          id?: string
+          location?: string | null
+          phone?: string | null
+          primary_crops?: string[] | null
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          farm_size?: number | null
+          full_name?: string
+          id?: string
+          location?: string | null
+          phone?: string | null
+          primary_crops?: string[] | null
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
+      produce: {
+        Row: {
+          batch_id: string
+          certificate_url: string | null
+          created_at: string
+          crop_type: string
+          farmer_id: string
+          farmer_name: string
+          harvest_date: string | null
+          id: string
+          image_url: string | null
+          location: string | null
+          qr_data: string
+          qr_image: string
+          status: string | null
+          tx_hash: string
+          updated_at: string
+        }
+        Insert: {
+          batch_id: string
+          certificate_url?: string | null
+          created_at?: string
+          crop_type: string
+          farmer_id: string
+          farmer_name: string
+          harvest_date?: string | null
+          id?: string
+          image_url?: string | null
+          location?: string | null
+          qr_data: string
+          qr_image: string
+          status?: string | null
+          tx_hash: string
+          updated_at?: string
+        }
+        Update: {
+          batch_id?: string
+          certificate_url?: string | null
+          created_at?: string
+          crop_type?: string
+          farmer_id?: string
+          farmer_name?: string
+          harvest_date?: string | null
+          id?: string
+          image_url?: string | null
+          location?: string | null
+          qr_data?: string
+          qr_image?: string
+          status?: string | null
+          tx_hash?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
