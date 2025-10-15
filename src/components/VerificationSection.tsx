@@ -14,6 +14,7 @@ import {
   Calendar,
   Award
 } from "lucide-react";
+import qrImage from "@/assets/qr-verification.jpg";
 
 export const VerificationSection = () => {
   const [qrInput, setQrInput] = useState("");
@@ -253,6 +254,20 @@ export const VerificationSection = () => {
               </Card>
             </div>
           )}
+
+          {/* Visual Banner */}
+          <div className="mt-8 relative rounded-lg overflow-hidden">
+            <img
+              src={qrImage}
+              alt="QR Code Verification System"
+              className="w-full h-64 object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+            <div className="absolute bottom-4 left-4 right-4">
+              <h4 className="text-lg font-semibold text-white mb-2">Instant Product Verification</h4>
+              <p className="text-sm text-white/90">Scan any AgriVerse QR code to access complete product history and authenticity</p>
+            </div>
+          </div>
 
           {/* How it Works */}
           <div className="mt-12 grid md:grid-cols-3 gap-6">

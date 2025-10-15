@@ -17,6 +17,7 @@ import {
   ArrowRight
 } from "lucide-react";
 import blockchainImage from "@/assets/blockchain-agriculture.jpg";
+import spiceImage from "@/assets/spice-farming.jpg";
 
 export const BlockchainSection = () => {
   const [trackingId, setTrackingId] = useState("");
@@ -201,6 +202,20 @@ export const BlockchainSection = () => {
                 </div>
               </Card>
             )}
+
+            {/* Spice Image */}
+            <div className="relative rounded-lg overflow-hidden mb-4">
+              <img
+                src={spiceImage}
+                alt="Kerala Spice Farming"
+                className="w-full h-48 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4">
+                <h4 className="text-lg font-semibold text-white mb-2">Kerala's Agricultural Heritage</h4>
+                <p className="text-sm text-white/90">From spices to grains, every product tracked with blockchain precision</p>
+              </div>
+            </div>
 
             {/* Blockchain Features */}
             <div className="grid grid-cols-2 gap-4">

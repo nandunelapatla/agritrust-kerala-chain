@@ -16,6 +16,8 @@ import {
   Sprout,
   Activity
 } from "lucide-react";
+import govtImage from "@/assets/govt-dashboard.jpg";
+import riceFieldsImage from "@/assets/kerala-rice-fields.jpg";
 
 export const DashboardSection = () => {
   const stats = {
@@ -93,17 +95,26 @@ export const DashboardSection = () => {
   return (
     <section id="dashboard" className="py-20">
       <div className="container">
-        <div className="text-center mb-12">
-          <Badge variant="outline" className="mb-4">
-            <BarChart3 className="h-4 w-4 mr-2" />
-            Government Dashboard
-          </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Kerala Agriculture <span className="text-primary">Monitoring</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Real-time insights into agricultural activities, supply chain transparency, and farmer welfare across Kerala
-          </p>
+        {/* Hero Image */}
+        <div className="relative rounded-lg overflow-hidden mb-12">
+          <img
+            src={govtImage}
+            alt="Government Agriculture Monitoring Center"
+            className="w-full h-64 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+            <Badge variant="outline" className="mb-4 bg-background/80 backdrop-blur">
+              <BarChart3 className="h-4 w-4 mr-2" />
+              Government Dashboard
+            </Badge>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white drop-shadow-lg">
+              Kerala Agriculture <span className="text-primary">Monitoring</span>
+            </h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto drop-shadow">
+              Real-time insights into agricultural activities, supply chain transparency, and farmer welfare across Kerala
+            </p>
+          </div>
         </div>
 
         {/* Key Statistics */}
@@ -186,7 +197,17 @@ export const DashboardSection = () => {
 
             {/* District-wise Data */}
             <Card className="p-6">
-              <h3 className="text-lg font-semibold mb-4">District-wise Overview</h3>
+              <div className="relative rounded-lg overflow-hidden mb-4">
+                <img
+                  src={riceFieldsImage}
+                  alt="Kerala Rice Fields"
+                  className="w-full h-32 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+                <div className="absolute bottom-2 left-3 right-3">
+                  <h3 className="text-lg font-semibold text-white">District-wise Overview</h3>
+                </div>
+              </div>
               <div className="space-y-3">
                 {districts.slice(0, 6).map((district) => (
                   <div key={district.name} className="flex items-center justify-between">
