@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { QrCode, Upload, ShieldCheck, MapPin, Calendar, Truck, CheckCircle, AlertTriangle } from "lucide-react";
+import consumerMarketImage from "@/assets/consumer-market.jpg";
 
 interface ConsumerDashboardProps {
   language: "en" | "ml";
@@ -70,11 +71,24 @@ export const ConsumerDashboard = ({ language }: ConsumerDashboardProps) => {
 
   return (
     <div className="container mx-auto px-4 py-6 space-y-6">
-      {/* Welcome Section */}
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-primary mb-2">{texts[language].welcome}</h1>
-        <div className="flex justify-center">
-          <ShieldCheck className="h-8 w-8 text-success" />
+      {/* Hero Banner */}
+      <div className="relative rounded-lg overflow-hidden mb-8">
+        <img
+          src={consumerMarketImage}
+          alt="Kerala Market"
+          className="w-full h-64 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+          <ShieldCheck className="h-12 w-12 text-white mb-3 drop-shadow-lg" />
+          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+            {texts[language].welcome}
+          </h1>
+          <p className="text-white/90 drop-shadow max-w-2xl">
+            {language === "en" 
+              ? "Scan QR codes to verify authentic Kerala agricultural products from farm to table"
+              : "കൃഷിയിടത്തിൽ നിന്ന് മേശവരെ ആധികാരിക കേരള കാർഷിക ഉൽപ്പന്നങ്ങൾ പരിശോധിക്കാൻ QR കോഡുകൾ സ്കാൻ ചെയ്യുക"}
+          </p>
         </div>
       </div>
 

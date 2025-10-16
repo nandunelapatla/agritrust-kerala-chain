@@ -7,6 +7,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Mic, Upload, MessageCircle, Bell, Leaf, Camera, MapPin, Calendar } from "lucide-react";
+import farmerHeroImage from "@/assets/farmer-hero.jpg";
+import farmerProduceImage from "@/assets/farmer-produce.jpg";
 
 interface FarmerDashboardProps {
   language: "en" | "ml";
@@ -63,11 +65,24 @@ export const FarmerDashboard = ({ language }: FarmerDashboardProps) => {
 
   return (
     <div className="container mx-auto px-4 py-6 space-y-6">
-      {/* Welcome Section */}
-      <div className="text-center mb-8">
-        <h1 className="text-3xl font-bold text-primary mb-2">{texts[language].welcome}</h1>
-        <div className="flex justify-center">
-          <Leaf className="h-8 w-8 text-success" />
+      {/* Hero Banner */}
+      <div className="relative rounded-lg overflow-hidden mb-8">
+        <img
+          src={farmerHeroImage}
+          alt="Kerala Farming"
+          className="w-full h-64 object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
+          <Leaf className="h-12 w-12 text-white mb-3 drop-shadow-lg" />
+          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+            {texts[language].welcome}
+          </h1>
+          <p className="text-white/90 drop-shadow max-w-2xl">
+            {language === "en" 
+              ? "Register your crops, get AI-powered advice, and track your produce on blockchain"
+              : "നിങ്ങളുടെ വിളകൾ രജിസ്റ്റർ ചെയ്യുക, AI ഉപദേശം നേടുക, ബ്ലോക്ക്ചെയിനിൽ ട്രാക്ക് ചെയ്യുക"}
+          </p>
         </div>
       </div>
 
@@ -75,10 +90,20 @@ export const FarmerDashboard = ({ language }: FarmerDashboardProps) => {
         {/* Crop Registration */}
         <Card className="lg:col-span-2">
           <CardHeader>
-            <CardTitle className="flex items-center gap-2">
-              <Leaf className="h-5 w-5 text-primary" />
-              {texts[language].cropDetails}
-            </CardTitle>
+            <div className="relative rounded-lg overflow-hidden mb-4">
+              <img
+                src={farmerProduceImage}
+                alt="Kerala Agricultural Produce"
+                className="w-full h-32 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+              <div className="absolute bottom-2 left-3">
+                <CardTitle className="flex items-center gap-2 text-white drop-shadow-lg">
+                  <Leaf className="h-5 w-5" />
+                  {texts[language].cropDetails}
+                </CardTitle>
+              </div>
+            </div>
             <CardDescription>Register your crop for blockchain tracking</CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">
