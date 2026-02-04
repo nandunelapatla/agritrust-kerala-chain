@@ -78,13 +78,13 @@ export const ConsumerDashboard = ({ language }: ConsumerDashboardProps) => {
           alt="Kerala Market"
           className="w-full h-64 object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-          <ShieldCheck className="h-12 w-12 text-white mb-3 drop-shadow-lg" />
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+          <ShieldCheck className="h-12 w-12 text-primary-foreground mb-3 drop-shadow-lg" />
+          <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground drop-shadow-lg mb-2">
             {texts[language].welcome}
           </h1>
-          <p className="text-white/90 drop-shadow max-w-2xl">
+          <p className="text-primary-foreground/90 drop-shadow max-w-2xl">
             {language === "en" 
               ? "Scan QR codes to verify authentic Kerala agricultural products from farm to table"
               : "കൃഷിയിടത്തിൽ നിന്ന് മേശവരെ ആധികാരിക കേരള കാർഷിക ഉൽപ്പന്നങ്ങൾ പരിശോധിക്കാൻ QR കോഡുകൾ സ്കാൻ ചെയ്യുക"}
