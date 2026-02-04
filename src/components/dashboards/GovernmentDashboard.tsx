@@ -100,13 +100,13 @@ export const GovernmentDashboard = ({ language }: GovernmentDashboardProps) => {
           alt="Government Monitoring Center"
           className="w-full h-64 object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-          <Shield className="h-12 w-12 text-white mb-3 drop-shadow-lg" />
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+          <Shield className="h-12 w-12 text-primary-foreground mb-3 drop-shadow-lg" />
+          <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground drop-shadow-lg mb-2">
             {texts[language].welcome}
           </h1>
-          <p className="text-white/90 drop-shadow max-w-2xl">
+          <p className="text-primary-foreground/90 drop-shadow max-w-2xl">
             {language === "en" 
               ? "Monitor agricultural activities, track subsidies, and ensure supply chain transparency across Kerala"
               : "കേരളത്തിലുടനീളം കാർഷിക പ്രവർത്തനങ്ങൾ നിരീക്ഷിക്കുക, സബ്‌സിഡികൾ ട്രാക്ക് ചെയ്യുക, വിതരണ ശൃംഖല സുതാര്യത ഉറപ്പാക്കുക"}

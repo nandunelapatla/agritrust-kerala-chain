@@ -72,13 +72,13 @@ export const FarmerDashboard = ({ language }: FarmerDashboardProps) => {
           alt="Kerala Farming"
           className="w-full h-64 object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+        <div className="absolute inset-0 bg-black/60" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-6">
-          <Leaf className="h-12 w-12 text-white mb-3 drop-shadow-lg" />
-          <h1 className="text-3xl md:text-4xl font-bold text-white drop-shadow-lg mb-2">
+          <Leaf className="h-12 w-12 text-primary-foreground mb-3 drop-shadow-lg" />
+          <h1 className="text-3xl md:text-4xl font-bold text-primary-foreground drop-shadow-lg mb-2">
             {texts[language].welcome}
           </h1>
-          <p className="text-white/90 drop-shadow max-w-2xl">
+          <p className="text-primary-foreground/90 drop-shadow max-w-2xl">
             {language === "en" 
               ? "Register your crops, get AI-powered advice, and track your produce on blockchain"
               : "നിങ്ങളുടെ വിളകൾ രജിസ്റ്റർ ചെയ്യുക, AI ഉപദേശം നേടുക, ബ്ലോക്ക്ചെയിനിൽ ട്രാക്ക് ചെയ്യുക"}
@@ -96,9 +96,9 @@ export const FarmerDashboard = ({ language }: FarmerDashboardProps) => {
                 alt="Kerala Agricultural Produce"
                 className="w-full h-32 object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent" />
+              <div className="absolute inset-0 bg-black/50" />
               <div className="absolute bottom-2 left-3">
-                <CardTitle className="flex items-center gap-2 text-white drop-shadow-lg">
+                <CardTitle className="flex items-center gap-2 text-primary-foreground drop-shadow-lg">
                   <Leaf className="h-5 w-5" />
                   {texts[language].cropDetails}
                 </CardTitle>
